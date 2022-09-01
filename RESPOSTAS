@@ -1,0 +1,117 @@
+1 QUESTÃO
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    int segundos, h, m, s, resto;
+
+    printf("Digite uma quantidade de segundos: ");
+    scanf("%d", &segundos);
+    
+    h = segundos / 3600;
+    resto = segundos % 3600;
+    m = resto / 60;
+    s = resto % 60;
+    printf("%d:%d:%d\n", h, m, s);
+
+    return 0;
+    *\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+    2 QUESTÃO
+    #include <stdio.h>
+#include <conio.h>
+
+main() {
+	
+int n1,n2,n3;
+float md, soma;
+
+printf("Digite tres numeros\n");
+scanf("%d %d %d", &n1,&n2,&n3);
+
+soma=n1+n2+n3;md=(soma/3);
+md=(soma/3);
+printf("\n\nA media entre %d, %d, %d e igual a %.2f.", n1,n2,n3, md);
+
+
+getch();
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 3
+#include <stdio.h>
+#include <math.h>
+
+int main(int argc, char const *argv[])
+{
+    float alturaInic, velocidadeInic, angulo, gravidade, distanciaFinal,tempo,delta;
+
+    printf("Escreva a altura de lançamento: ");
+
+    scanf("%f",&alturaInic);
+
+    printf("\nEscreva a velocidade de inicial: ");
+
+    scanf("%f",&velocidadeInic);
+
+    printf("\nEscreva o angulo de lançamento: ");
+
+    scanf("%f",&angulo);
+
+    gravidade = 9.81;
+    delta = pow(velocidadeInic,2)*pow(sin(angulo),2)+2*gravidade*alturaInic;
+    distanciaFinal = ((velocidadeInic*cos(angulo))*(velocidadeInic*sin(angulo)*sqrt(delta)))/gravidade;
+
+    printf("\nO projétil atingirá o chão a %.2f metros",distanciaFinal);
+
+
+    return 0;
+
+\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 4
+
+int main() {
+   int num;
+   
+   printf("Digite um numero:\n");
+   scanf("%d", &num);
+   
+   if(num % 2 == 0){
+        printf("Numero par");
+   }
+    else {
+        printf("Numero impar");
+    }
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 5 
+int main(void){
+	
+int x,y,z,tmp;
+
+printf("Informe 3 medidas de um triangulo:");
+scanf("%i")
+printf("x: ");
+scanf("%i",&x);
+
+printf("y: ");
+scanf("%i",&y);
+
+printf("z: ");
+scanf("%i",&z);
+
+if(x<(y+z))
+{
+	
+if(y>z)
+{
+	tmp = y-z;	
+}
+else
+{
+tmp = z-y;
+}
+if(tmp >= x)
+{
+printf("Estas medidas nao formam um triangulo!!");
+
+return 0;
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
