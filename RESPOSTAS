@@ -114,4 +114,245 @@ printf("Estas medidas nao formam um triangulo!!");
 
 return 0;
 \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 6
+
+int main() {
+    int a, b, c, menor, maior;
+
+    printf("Digite tres valores: ");
+    scanf("%d%d%d", &a, &b, &c);
+
+    if(a < b){
+        if(a < c)
+            menor = a;
+        else
+            menor = c;
+    }
+    else{
+        if(b < c)
+            menor = b;
+        else
+            menor = c;
+    }
+
+    if(a > b){
+        if(a > c)
+            maior = a;
+        else
+            maior = c;
+    }
+    else{
+        if(b > c)
+            maior = b;
+        else
+            maior = c;
+    }
+    printf("Primeira versao\tMenor: %d\tMaior: %d\n", menor, maior);
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 7
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void){
+	
+    float n1, n2, resultado;
+    char operacao;
+    
+    printf("\nInforme uma operaçao(+; -; /; *;): ");
+    scanf("%c", &operacao);
+    printf("\nInforme um numero: ");
+    scanf("%f", &n1);
+    printf("\nInforme outro numero: ");
+    scanf("%f", &n2);
+    switch(operacao)
+    {
+        case '+': resultado = n1 + n2;
+                  break;
+        case '-': resultado = n1 - n2;
+                  break;
+        case '/': resultado = n1 / n2;
+                  break;
+        case '*': resultado = n1 * n2;
+                  break;
+    }
+    printf("\n %2.2f %c %2.2f = %2.2f", n1, operacao, n2, resultado);
+    printf("\n\n\n");
+   }
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 10
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int vcarro,vp,multa;
+
+    printf ("informe a velocidade permitida na avenida");
+    scanf("%d",&vp);
+    printf("informe a velocidade do carro");
+    scanf("%d",&vcarro);
+
+    if(vcarro>vp)
+    {
+        if (vcarro<=(vp+1))
+        {
+            multa=5;
+        }
+        }
+        printf("\nA multa foi de-->%d reais\n",multa);
+    }
+    else
+    {
+        printf("\nVeiculo dentro do limite!\n");
+    }
+
+    system("pause");
+    return 0;
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 11
+
+#include <stdio.h>
+
+int main()
+{
+        int mes,
+            dias=31;
+
+        printf("Digite o mes [1-12]: ");
+        scanf("%d", &mes);
+
+        if(mes>12 || mes<1)
+            printf("Mes invalido");
+        else
+            switch( mes )
+                {
+                    
+		    case 2:
+                        dias -=2;
+			
+                    case 4: case 6: case 9: case 11:
+                        dias--;
+                }
+
+        printf("O mes %d possui %d dias", mes, dias);
+    }
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 13
+
+int main()
+{
+float quant=0, valor, salario, bonus;
+printf("Quantidade de horas trabalhadas: \n");
+scanf ("%f", &quant);
+printf("Valor da hora: \n");
+scanf ("%f", &valor);
+salario = quant * valor;
+printf ("O salário é: R$ %.2f\n", salario);
+
+if (quant<=40)
+
+printf ("O valor do salário semanal é de: R$ %.2f\ne não há bônus!\n");
+
+
+else if (quant <=60)
+{
+bonus = salario * 0.5;
+printf ("O bonus é de: R$ %.2f\n", bonus);
+printf ("O salário total é de R$ %.2f", salario + bonus);
+
+}
+else
+{
+bonus = salario * 1;
+printf ("O bonus é de: R$ %.2f\n", bonus);
+printf ("O salário total é de R$ %.2f", salario + bonus);
+
+}
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 17
+
+#include<stdio.h>
+#include<stdlib.h>
+
+int main (){
+int num;
+int a,b,soma,quadrado;
+  for(num=1000;num<=9999;num++) {
+		  a = num / 100;
+		  b = num % 100;
+
+		  soma = a+b;
+		  quadrado = soma*soma;
+		  if (quadrado == num)
+				  printf("%d + %d = %d * %d = %d\n",a,b,soma,soma,num);
+  }
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 18
+
+#include <stdio.h>
+
+int main(void) 
+{
+    int n, fib = 0, aux = 0;    
+    printf("Informe um numero para calcular a seq. de Fibonacci.\n ");
+
+    scanf("%d", &n);
+    while(fib <1000)//Só vai mostrar até 1000
+    { 
+        printf("%d-", fib);                   
+        fib = fib + aux;                 
+        aux = n;
+        n = fib;        
+    }
+  return 0;
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 19
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int eh_perfeito( int numero )
+{
+    int resto = 0;
+    int soma = 0;
+    int i = 0;
+
+    for( i = 1; i <= (numero - 1); i++ )
+    {
+        resto = numero % i;
+
+        if(resto == 0)
+            soma += i;
+    }
+
+    if( soma == numero )
+        return 1;
+
+    return 0;
+}
+
+int main( void )
+{
+    int * pnumero = (int*) malloc( sizeof(int) );
+
+    printf( "Digite um numero inteiro: ");
+    scanf( "%d", pnumero );
+
+    if( eh_perfeito(*pnumero) )
+        printf("Numero Perfeito!\n");
+    else
+        printf("Numero NAO Perfeito!\n");
+
+    free(pnumero);
+
+    return 0;
+}
+\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+QUESTÃO 20
 
